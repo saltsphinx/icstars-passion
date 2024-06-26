@@ -13,13 +13,18 @@ body {
 }
 
 header {
+  position: fixed;
+  width: 100%;
   background-color: #262423e6;
   padding: 1rem;
   text-align: center;
+  border-bottom: #bbbbbb80 0.4rem solid;
 }
 
 main {
+  background: #3d3938;
   margin: 0 auto;
+  padding: 1rem;
   width: 50rem;
 }
 
@@ -28,7 +33,18 @@ h1 {
 }
 
 h2 {
-  font-weight: 300;
+  margin: 0 0 1rem 0;
+}
+
+.hero {
+  object-fit: cover;
+  height: 60vh;
+  width: 100%;
+}
+
+.hero,
+main > section {
+  margin-bottom: 3rem;
 }
 
 .align-center-flex {
