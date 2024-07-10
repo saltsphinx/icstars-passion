@@ -18,15 +18,16 @@ async function displayVideos() {
     ).then((result) => result.json());
 
     const trackListWrapper = document.createElement("div");
-    const ancherElem = document.createElement("a");
+    const anchorElem = document.createElement("a");
     const playlistHeader = document.createElement("h3");
 
     trackListWrapper.classList.add("track-list-wrapper");
     playlistHeader.textContent = data.feed.title;
-    ancherElem.href = "https://www.youtube.com/playlist?list=" + ID;
+    anchorElem.href = "https://www.youtube.com/playlist?list=" + ID;
+    anchorElem.setAttribute("target", "_blank")
 
-    ancherElem.append(playlistHeader);
-    playlistWrapper.append(ancherElem, trackListWrapper);
+    anchorElem.append(playlistHeader);
+    playlistWrapper.append(anchorElem, trackListWrapper);
     data.items.forEach((songObj) => {
       const wrapper = document.createElement("div");
       const coverArt = document.createElement("div");
@@ -52,7 +53,7 @@ function updatePlayer(url) {
     playerHidden = false;
     document.querySelector(".track-player").classList.toggle("hide");
   }
-  trackPlayer.src = "https://www.youtube.com/embed/" + url.slice(url.indexOf("=") + 1) + "?controls=0&autoplay=1";
+  trackPlayer.src = "https://www.youtube.com/embed/" + url.slice(url.indexOf("=") + 1) ;
 }
 
 displayVideos();
