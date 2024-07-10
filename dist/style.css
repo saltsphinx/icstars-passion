@@ -1,14 +1,122 @@
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  background-color: #050505;
+}
+
+body > * {
+  margin: 0.5rem 0;
+}
+
+header {
+  /* flex: 1; */
+}
+
+main {
+  flex: 2;
+  margin: 0 15rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 5rem; 
+  background-color: #1b1b1b;
+  border-radius: 10px;
+}
+
+section > * {
+  margin: 1rem 0;
+}
+
+.track-list-wrapper,
+header,
+.track-player {
+  background-color: #1b1b1b;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  margin: 0.5rem 0;
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+h4
+{
+  margin: 0.5rem 0;
+  /* text-overflow: ellipsis; */
+  /* text-align: center; */
+  font-weight: 300;
+}
+
 .track-list-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 0.5rem;
 }
-.track-wrapper {
 
+.track-wrapper {
+  flex: 0 1 10rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 0.5rem 1rem;
+}
+
+.track-wrapper:hover {
+  background-color: #262626;
 }
 
 .cover-art {
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-  max-height: 10rem;
-  max-width: 10rem;
+  background-size: 180%;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  aspect-ratio: 1;
+}
+
+.cover-art,
+.track-wrapper {
+  border-radius: 5px;
+}
+
+.track-player {
+  position: fixed;
+  bottom: 0;
+}
+
+.about-image {
+  max-width: 20rem;
+  height: auto;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
 }
